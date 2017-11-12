@@ -17,12 +17,10 @@ def getOpener(head):
     return opener
 
 def ungzip(data):
-    try:        # 閻忓繑绻嗛惁顖滄喆閿濆懎绔�
-      #  print('婵繐绲藉﹢顏嗘喆閿濆懎绔�.....')
+    try:        
         data = gzip.decompress(data)
-      #  print('閻熸瑱绲界敮鍥╋拷鐟版湰閻︼拷!')
     except:
-       pass # print('闁哄牜浜炵划锟犲储鐎ｎ剛绱�, 闁哄啰濞�濞撳墎鎲撮敐鍛')
+       pass
     return data
 
 
@@ -47,11 +45,11 @@ header = {
 url_login = 'http://ssfree.me/auth/login'
 url_checkin = 'http://ssfree.me/user/checkin'
 
-opener = getOpener(header)
 email=['32731964@qq.com','184029788@qq.com','aixy.oul@gmail.com','gnix.oag+1@gmail.com','gnix.oag@gmail.com']
 password = '024573ss'
 
 for i in email:
+    opener = getOpener(header)
     postDict = {
         'email': i,
         'passwd': password,
@@ -62,17 +60,16 @@ for i in email:
     postData = urllib.parse.urlencode(postDict).encode()
     op = opener.open(url_login, postData)
     data = op.read()
-    #data = ungzip(data)
-
-    #print(data)
-
-    #缂佹稒鍎抽崺宀勬儍閸曨偅鍕鹃柛褝鎷�
-
+    
     op = opener.open(url_checkin,postData)
-
     data = op.read()
     data = ungzip(data)
-
     print(data)
     opener.close()
+    del postData
+    del data
+    del op
+    del postDict
+    del opener
+    
     
