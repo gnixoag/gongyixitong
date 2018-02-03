@@ -16,7 +16,7 @@ import PyQt5
 import os, base64
 from hashlib import sha512
 from hmac import HMAC
-from mainUI import mainUI
+from mainUI import *
 
 
 class UI_login(QDialog):
