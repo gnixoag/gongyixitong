@@ -1,16 +1,18 @@
 #!/usr/bin/env python
+#coding=utf-8
 '''
 #用户登陆界面
 
 @author: gaoxing
 '''
 
-import sys,os 
+import sys
 from PyQt5.QtWidgets import (QDialog,QApplication,QBoxLayout,
                              QLabel,QLineEdit,QPushButton,
                              QVBoxLayout,QHBoxLayout,QComboBox,
                              QStyleFactory,QCompleter,
                              QFormLayout,QMessageBox,QAction,QAbstractItemView)
+from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt
 from PyQt5.Qt import QToolBar, QTableWidget
 
@@ -18,17 +20,16 @@ class UserManageUI(QDialog):
     '''
     显示用户信息的界面
     '''
-    def __init__(self):
-        super(QDialog,self).__init__()
-        self.setupUI()
+    def __init__(self,parent=None):
+        super().__init__()
+        self._setupUI()
         self.setWindowTitle("用户管理")
         self.setWindowFlags(self.windowFlags() & 
                             ~Qt.WindowContextHelpButtonHint) #隐藏？按钮
         QApplication.setStyle(QStyleFactory.create("Fusion"))
         self.resize(600,400)
-
         
-    def setupUI(self):
+    def _setupUI(self):
         newuseraction=QAction("新增",self)
         mdaction=QAction("修改",self)
         delaction=QAction("删除",self)
@@ -55,6 +56,7 @@ class UserManageUI(QDialog):
         layout.addWidget(viewtable)
         
         self.setLayout(layout)
+        print("dlfaadf")
         
         exitaction.triggered.connect(self.close)
         mdaction.triggered.connect(self.mduser)

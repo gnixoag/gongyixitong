@@ -6,24 +6,24 @@
 '''
 
 import sys,os 
-from PyQt5.QtWidgets import (QDialog,QApplication,QBoxLayout,
-                             QLabel,QLineEdit,QPushButton,
-                             QVBoxLayout,QHBoxLayout,QComboBox,
-                             QStyleFactory,QCompleter,
-                             QFormLayout,QMessageBox)
+#from PyQt5.QtWidgets import (QDialog,QApplication,QBoxLayout,
+#                             QLabel,QLineEdit,QPushButton,
+#                             QVBoxLayout,QHBoxLayout,QComboBox,
+#                             QStyleFactory,QCompleter,
+#                             QFormLayout,QMessageBox)
+from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt
-import PyQt5
+from PyQt5 import *
 import os, base64
 from hashlib import sha512
 from hmac import HMAC
-from mainUI import *
 
 
 class UI_login(QDialog):
     '''
     #用户登入界面
     '''
-    def __init__(self):
+    def __init__(self,parent=None):
         super(UI_login,self).__init__()
         self.initUI()
     
@@ -31,6 +31,7 @@ class UI_login(QDialog):
         '''
         #初始化界面
         '''
+        
         self.setWindowTitle("面向MES系统的CAPP-用户登陆")
         self.resize(400,180)
         self.setFixedSize(self.size())
@@ -53,7 +54,7 @@ class UI_login(QDialog):
         password=self.lePassword.text()
         password=self.encrypt(password)
         
-        if self.validate(username, "高星") and self.validate(password, "12345") :
+        if self.validate(username, "gaoxing") and self.validate(password, " ") :
             #QMessageBox.information(None, "登陆提示", "用户名："+username+"\n密码："+password+"\n登陆成功", QMessageBox.Ok, QMessageBox.Cancel)
             self.accept()
         else:
@@ -135,11 +136,12 @@ class UI_login(QDialog):
               
 if __name__ == '__main__':
     app=QApplication(sys.argv)
-    pyqt = os.path.dirname(PyQt5.__file__)
-    QApplication.addLibraryPath(os.path.join(pyqt, "plugins"))
+    from src.widgets.mainUI import *
+    from src.widgets.usermanageUI import *
+    for i in dir():print(i)
     login=UI_login()
     if login.exec_():
-        w=mainUI()
+        w=mainUI(parent=None)
         w.show()
         sys.exit(app.exec_())
-    
+   

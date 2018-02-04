@@ -6,11 +6,12 @@ Created on 2018年1月25日
 import sys
 from PyQt5.QtWidgets import (QMainWindow,QApplication,QAction,
                              QTableWidget,QHBoxLayout,QPushButton,
-                             QToolBar,QStyleFactory)
+                             QToolBar,QStyleFactory,QDialog)
+from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon
 
 class mainUI(QMainWindow):
-    def __init__(self):
+    def __init__(self,parent=None):
         super().__init__()
         self.initUI()
         
@@ -56,17 +57,20 @@ class mainUI(QMainWindow):
         toolbar.addAction(usergroupmanageaction)
         toolbar.addAction(newBOMaction)
         
-              
-      
+        usermanageaction.triggered.connect(self.usermanage)
+        
         self.statusBar().showMessage('工艺系统')
         
-        table = QTableWidget(20,10)  
+        table = QTableWidget(20,10) 
         
-        
-
+    def usermanage(self):
+        print('测试信息')
+        d=UserManageUI(parent=self)
+        d.exec_()
 
 if __name__ == '__main__':
     app=QApplication(sys.argv)
+    from src.widgets.usermanageUI import * 
     w=mainUI()
     w.show()
     sys.exit(app.exec_())
