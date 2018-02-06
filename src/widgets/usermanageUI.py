@@ -13,7 +13,7 @@ import sys
 #                             QStyleFactory,QCompleter,
 #                             QFormLayout,QMessageBox,QAction,QAbstractItemView)
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
+from PyQt5.QtCore import * 
 from PyQt5.Qt import QToolBar, QTableWidget
 from src.test.dbDingyi import *
 from inspect import getargs
@@ -29,7 +29,7 @@ class UserManageUI(QDialog):
         self.setWindowFlags(self.windowFlags() & 
                             ~Qt.WindowContextHelpButtonHint) #隐藏？按钮
         QApplication.setStyle(QStyleFactory.create("Fusion"))
-        self.resize(600,400)
+        self.resize(800,400)
         
     def _setupUI(self):
         newuseraction=QAction("新增",self)
@@ -51,9 +51,12 @@ class UserManageUI(QDialog):
         userdata=MyTableModel(datain=d)
         viewtable.setModel(userdata)
         #viewtable.setHorizontalHeaderLabels(['用户名','组名','组说明','ERP用户代码']) 
-        viewtable.verticalHeader().setVisible(False)
-        viewtable.setEditTriggers(QAbstractItemView.NoEditTriggers) 
-        viewtable.setSelectionBehavior(QAbstractItemView.SelectRows) 
+        viewtable.verticalHeader().setVisible(False)#不显示
+        viewtable.setEditTriggers(QAbstractItemView.NoEditTriggers) #不能编辑
+        viewtable.setSelectionBehavior(QAbstractItemView.SelectRows)#只能选择行 
+        #viewtable.horizontalHeader().setSectionResizeMode(1)
+        viewtable.resizeColumnsToContents()#列宽自适应内容
+        
         
         layout=QVBoxLayout()
         layout.addWidget(toolbar)
@@ -79,13 +82,30 @@ class MyTableModel(QAbstractTableModel):
         return len(self.arraydata)
 
     def columnCount(self, parent):
-        return 6
+        return len(self.arraydata[0].nameid())
+    
     def data(self, index, role=Qt.DisplayRole):
+        a=self.arraydata[index.row()].nameid()
+        if role == Qt.TextAlignmentRole :
+            return Qt.AlignVCenter
+        elif  role != Qt.DisplayRole: 
+            return QVariant()
+        return getattr(self.arraydata[index.row()],str(a[index.column()]))
         
-            a=self.arraydata[index.row()].nameid()
-            return getattr(self.arraydata[index.row()],str(a[index.column()]))
-
+    
+    def headerData(self, col, orientation, role):
+        a=self.arraydata[0].namechiness()
+        
+        if orientation == Qt.Horizontal and role == Qt.DisplayRole :
+            return QVariant(a[col])
+        #elif role== Qt.SizeHintRole :
+        #   return QVariant(QSize(200,20))
+        return QVariant()
+    
        
+    def setData(self, index, value, role):
+        print ("setData", index.row(), index.column(), value)
+      
 class MDuserUI(QDialog):
     '''
     修改用户

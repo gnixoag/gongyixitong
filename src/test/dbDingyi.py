@@ -13,7 +13,7 @@ from sqlalchemy.orm import relationship,sessionmaker,scoped_session
 
 
 
-engine=create_engine("sqlite:///../test/users.db")
+engine=create_engine("sqlite:///test/users.db")
 
 Base=declarative_base()
 session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
@@ -31,7 +31,9 @@ class Users(Base):
     
     def nameid(self):
         return ['uid', 'name', 'email','password','address','group_name']
-
+    
+    def namechiness(self):
+        return ['用户iD','姓名','邮箱','密码','地址','用户组']
 
 class Group(Base):
     __tablename__="dbt_group"
