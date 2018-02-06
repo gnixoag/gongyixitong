@@ -17,14 +17,15 @@ from PyQt5 import *
 import os, base64
 from hashlib import sha512
 from hmac import HMAC
+from src.modle.encrypt import *
 
 
-class UI_login(QDialog):
+class UI_login(QDialog,Encrypt):
     '''
     #用户登入界面
     '''
     def __init__(self,parent=None):
-        super(UI_login,self).__init__()
+        super(QDialog,self).__init__()
         self.initUI()
     
     def initUI(self):
@@ -105,7 +106,8 @@ class UI_login(QDialog):
         layout.addLayout(self.buttonLayout)
         layout.addStretch()
         self.setLayout(layout)
-        
+    '''  
+    继承 Encrypt 类了  
     def encrypt(self,password, salt=None):
         """Hash password on the fly."""
         if salt is None:
@@ -133,15 +135,14 @@ class UI_login(QDialog):
     def validate(self,hashed, input_password):
         salt=base64.b64decode(bytes(hashed, encoding = "utf8"))
         return hashed == self.encrypt(input_password, salt[:8])
+    '''
               
 if __name__ == '__main__':
     app=QApplication(sys.argv)
     from src.widgets.mainUI import *
-    from src.widgets.usermanageUI import *
-    for i in dir():print(i)
     login=UI_login()
     if login.exec_():
-        w=mainUI(parent=None)
+        w=MainUI(parent=None)
         w.show()
         sys.exit(app.exec_())
    

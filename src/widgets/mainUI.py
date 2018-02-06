@@ -9,8 +9,9 @@ from PyQt5.QtWidgets import (QMainWindow,QApplication,QAction,
                              QToolBar,QStyleFactory,QDialog)
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon
+from src.widgets.usermanageUI import *
 
-class mainUI(QMainWindow):
+class MainUI(QMainWindow):
     def __init__(self,parent=None):
         super().__init__()
         self.initUI()
@@ -71,6 +72,6 @@ class mainUI(QMainWindow):
 if __name__ == '__main__':
     app=QApplication(sys.argv)
     from src.widgets.usermanageUI import * 
-    w=mainUI()
+    w=MainUI()
     w.show()
     sys.exit(app.exec_())

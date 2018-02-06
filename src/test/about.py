@@ -27,7 +27,18 @@ class About(QDialog):
         QApplication.setStyle(QStyleFactory.create("Fusion"))
         
     def setupUI(self):
-        pass
+        
+
+        label = QLabel()
+        label.setText(' 开发日期：2018年1月1日 \n \
+版本信息：测试版 \n \
+最后修改：2018.1.1 \n \
+开发单位：高星' )
+        qtable=QTabWidget()
+        qtable.addTab(label, 'baid')
+        layout=QVBoxLayout()
+        layout.addWidget(qtable)
+        self.setLayout(layout)
         
         
         

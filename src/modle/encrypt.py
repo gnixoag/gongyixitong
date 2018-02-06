@@ -7,16 +7,18 @@ import os, base64
 from hashlib import sha512
 from hmac import HMAC
 
-class Encrypt(object):
+class Encrypt():
     '''
     classdocs
     '''
+    
 
-
-    def __init__(self, params):
+    def __init__(self ):
         '''
         Constructor
         '''
+        pass
+    
     def encrypt(self,password, salt=None):
         """Hash password on the fly."""
         if salt is None:
