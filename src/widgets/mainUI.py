@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import (QMainWindow,QApplication,QAction,
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon
 from src.widgets.usermanageUI import *
+from src.widgets.about import *
 
 class MainUI(QMainWindow):
     def __init__(self,parent=None):
@@ -52,6 +53,8 @@ class MainUI(QMainWindow):
         helpmenu=menuber.addMenu("帮助(&B)")
         aboutation=QAction("关于(A)",self)
         helpmenu.addAction(aboutation)
+        aboutation.triggered.connect(self.aboutok)
+    
         
         toolbar=self.addToolBar("工具栏")
         toolbar.addAction(usermanageaction)
@@ -63,6 +66,9 @@ class MainUI(QMainWindow):
         self.statusBar().showMessage('工艺系统')
         
         table = QTableWidget(20,10) 
+    def aboutok(self):
+        a=About()
+        a.exec_()
         
     def usermanage(self):
         print('测试信息')

@@ -13,7 +13,7 @@ from sqlalchemy.orm import relationship,sessionmaker,scoped_session
 
 
 
-engine=create_engine("sqlite:///users.db",echo=True)
+engine=create_engine("sqlite:///../test/users.db")
 
 Base=declarative_base()
 session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
@@ -28,6 +28,9 @@ class Users(Base):
     password=Column(String)
     address=Column(String)
     group_name=Column(String,ForeignKey("dbt_group.gid"))
+    
+    def nameid(self):
+        return ['uid', 'name', 'email','password','address','group_name']
 
 
 class Group(Base):
@@ -101,6 +104,10 @@ class UsersDB(object):
                 mysql_batch_list = []
         session.add_all(mysql_batch_list)
         session.commit()
+        
+    def getall(self):
+        return session.query(Users).all()
+        
 
 
 DBSession = sessionmaker(bind=engine)
@@ -111,9 +118,19 @@ a=Users(name='高星',email="gnix.oag@gmail.com",password="12345",address="galj"
 
 userdb=UsersDB()
 
-userdb.initDB()
+#userdb.initDB()
 
-userdb.insert(a)
+#userdb.insert(a)
+c=Users()
+
+d=session.query(Users).all()
+
+print(c.nameid(),'okjadsf')
+
+
+print(getattr(d[1],'name'))
+
+
 
 
 

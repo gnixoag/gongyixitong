@@ -14,7 +14,7 @@ class About(QDialog):
     '''
 
 
-    def __init__(self):
+    def __init__(self,parent=None):
         '''
         Constructor
         '''
@@ -34,8 +34,16 @@ class About(QDialog):
 版本信息：测试版 \n \
 最后修改：2018.1.1 \n \
 开发单位：高星' )
+        
+        labe2 = QLabel()
+        labe2.setText(' 开发日期：2018年1月1日 \n \
+版本信息：测试版 \n \
+最后修改：2018.1.1 \n \
+开发单位：高星' )
+        
         qtable=QTabWidget()
-        qtable.addTab(label, 'baid')
+        qtable.addTab(label, '版本信息')
+        qtable.addTab(labe2,'作者信息')
         layout=QVBoxLayout()
         layout.addWidget(qtable)
         self.setLayout(layout)

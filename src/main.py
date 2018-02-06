@@ -11,6 +11,6 @@ if __name__ == '__main__':
     app=QApplication(sys.argv)
     login=UI_login()
     if login.exec_():
-        w=mainUI()
+        w=MainUI()
         w.show()
         sys.exit(app.exec_())

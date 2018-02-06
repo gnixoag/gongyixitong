@@ -7,14 +7,16 @@
 '''
 
 import sys
-from PyQt5.QtWidgets import (QDialog,QApplication,QBoxLayout,
-                             QLabel,QLineEdit,QPushButton,
-                             QVBoxLayout,QHBoxLayout,QComboBox,
-                             QStyleFactory,QCompleter,
-                             QFormLayout,QMessageBox,QAction,QAbstractItemView)
+#from PyQt5.QtWidgets import (QDialog,QApplication,QBoxLayout,
+#                             QLabel,QLineEdit,QPushButton,
+#                             QVBoxLayout,QHBoxLayout,QComboBox,
+#                             QStyleFactory,QCompleter,
+#                             QFormLayout,QMessageBox,QAction,QAbstractItemView)
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import *
 from PyQt5.Qt import QToolBar, QTableWidget
+from src.test.dbDingyi import *
+from inspect import getargs
 
 class UserManageUI(QDialog):
     '''
@@ -45,8 +47,10 @@ class UserManageUI(QDialog):
         toolbar.addAction(printaction)
         toolbar.addAction(exitaction)
         
-        viewtable=QTableWidget(10,4)
-        viewtable.setHorizontalHeaderLabels(['用户名','组名','组说明','ERP用户代码']) 
+        viewtable=QTableView()
+        userdata=MyTableModel(datain=d)
+        viewtable.setModel(userdata)
+        #viewtable.setHorizontalHeaderLabels(['用户名','组名','组说明','ERP用户代码']) 
         viewtable.verticalHeader().setVisible(False)
         viewtable.setEditTriggers(QAbstractItemView.NoEditTriggers) 
         viewtable.setSelectionBehavior(QAbstractItemView.SelectRows) 
@@ -66,7 +70,22 @@ class UserManageUI(QDialog):
         b=MDuserUI(parent=self)
         b.exec_()                    
             
+class MyTableModel(QAbstractTableModel):
+    def __init__(self, datain, parent=None, *args):
+        QAbstractTableModel.__init__(self, parent, *args)
+        self.arraydata = datain
+
+    def rowCount(self, parent):
+        return len(self.arraydata)
+
+    def columnCount(self, parent):
+        return 6
+    def data(self, index, role=Qt.DisplayRole):
         
+            a=self.arraydata[index.row()].nameid()
+            return getattr(self.arraydata[index.row()],str(a[index.column()]))
+
+       
 class MDuserUI(QDialog):
     '''
     修改用户
