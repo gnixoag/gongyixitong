@@ -1,7 +1,8 @@
+from PyQt5.QtWidgets import *
+
 from gongyixitong.widgets.login import *
 from gongyixitong.widgets.mainUI import *
 from gongyixitong.widgets.usermanageUI import UserManageUI
-from PyQt5.QtWidgets import *
 
 if __name__ == '__main__':
     import sys

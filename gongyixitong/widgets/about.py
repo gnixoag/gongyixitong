@@ -3,10 +3,11 @@ Created on 2018年2月4日
 
 @author: gaoxing
 '''
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
 import sys
+
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 
 class About(QDialog):

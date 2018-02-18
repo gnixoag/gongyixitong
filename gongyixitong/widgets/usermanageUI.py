@@ -7,15 +7,13 @@
 '''
 
 import sys
-# from PyQt5.QtWidgets import (QDialog,QApplication,QBoxLayout,
-#                             QLabel,QLineEdit,QPushButton,
-#                             QVBoxLayout,QHBoxLayout,QComboBox,
-#                             QStyleFactory,QCompleter,
-#                             QFormLayout,QMessageBox,QAction,QAbstractItemView)
-from PyQt5.QtWidgets import *
+
+from PyQt5.Qt import QTableWidget, QToolBar
 from PyQt5.QtCore import *
-from PyQt5.Qt import QToolBar, QTableWidget
+from PyQt5.QtWidgets import *
+
 from gongyixitong.test.dbDingyi import *
+
 
 class UserManageUI(QDialog):
     '''

@@ -4,13 +4,15 @@ Created on 2018年1月25日
 @author: gaoxing
 '''
 import sys
-from PyQt5.QtWidgets import (QMainWindow, QApplication, QAction,
-                             QTableWidget, QHBoxLayout, QPushButton,
-                             QToolBar, QStyleFactory, QDialog)
-from PyQt5.QtWidgets import *
+
 from PyQt5.QtGui import QIcon
-from gongyixitong.widgets.usermanageUI import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtWidgets import (QAction, QApplication, QDialog, QHBoxLayout,
+                             QMainWindow, QPushButton, QStyleFactory,
+                             QTableWidget, QToolBar)
+
 from gongyixitong.widgets.about import *
+from gongyixitong.widgets.usermanageUI import *
 
 
 class MainUI(QMainWindow):

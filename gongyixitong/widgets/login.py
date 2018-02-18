@@ -5,20 +5,16 @@
 @author: gaoxing
 '''
 
-import sys
-import os
-# from PyQt5.QtWidgets import (QDialog,QApplication,QBoxLayout,
-#                             QLabel,QLineEdit,QPushButton,
-#                             QVBoxLayout,QHBoxLayout,QComboBox,
-#                             QStyleFactory,QCompleter,
-#                             QFormLayout,QMessageBox)
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import Qt
-from PyQt5 import *
-import os
 import base64
+import os
+import sys
 from hashlib import sha512
 from hmac import HMAC
+
+from PyQt5 import *
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import *
+
 from gongyixitong.modle.encrypt import *
 
 
