@@ -1,0 +1,19 @@
+默认数据库结构
+
+user : u_id username email password ative
+            用户名    邮件   口令      是否激活
+user_inf: ui_id phone  addre inittime uptime 
+                电话    地址   建立时间  更新时间  
+user_log:   
+         登入时间，退出时间
+
+
+
+
+
+
+
+
+默认数据
+
+

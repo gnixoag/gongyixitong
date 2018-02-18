@@ -6,7 +6,7 @@ Created on 2018年1月17日
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import app
 import sys
-from 
+
 
 def windowd():
     app = QtWidgets.QApplication(sys.argv)
@@ -14,11 +14,11 @@ def windowd():
     w.setWindowTitle("高星")
     lable1 = QtWidgets.QLabel(w)
     lable1.setText("lkasjdla :lsdajf ")
-    lable1.move(100,100)
-    w.setGeometry(100,100,300,300)
+    lable1.move(100, 100)
+    w.setGeometry(100, 100, 300, 300)
     w.show()
     sys.exit(app.exec_())
-    
+
 
 if __name__ == '__main__':
     windowd()

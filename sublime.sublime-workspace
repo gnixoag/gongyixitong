@@ -1,0 +1,605 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"users.db"
+			],
+			[
+				"f",
+				"format\tfunction"
+			],
+			[
+				"jion",
+				"join\tfunction"
+			],
+			[
+				"app",
+				"append\tPyQt Functions"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"q",
+				"QApplication"
+			],
+			[
+				"ge",
+				"getcwd\tfunction"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "from gongyixitong.widgets.login import *\nfrom gongyixitong.widgets.mainUI import *\nfrom gongyixitong.widgets.usermanageUI import UserManageUI\nfrom PyQt5.QtWidgets import *\n\nif __name__ == '__main__':\n    import sys\n    app = QApplication(sys.argv)\n    login = UI_login()\n    if login.exec_():\n        w = MainUI()\n        w.show()\n        sys.exit(app.exec_())\n ",
+			"file": "gongyixitong/main.py",
+			"file_size": 374,
+			"file_write_time": 131633932200361626,
+			"settings":
+			{
+				"buffer_size": 362,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"XeLaTeX"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "ip",
+		"selected_items":
+		[
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remover",
+				"Package Control: Remove Repository"
+			],
+			[
+				"",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"list pac",
+				"Package Control: List Packages"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 653.0
+	},
+	"console":
+	{
+		"height": 171.0,
+		"history":
+		[
+			"swallow_startup_errors"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/github/gongyixitong",
+		"/E/github/gongyixitong/bin",
+		"/E/github/gongyixitong/gongyixitong",
+		"/E/github/gongyixitong/gongyixitong/temp_db",
+		"/E/github/gongyixitong/gongyixitong/widgets"
+	],
+	"file_history":
+	[
+		"/D/Program Files/Anaconda3/Lib/site-packages/gongyixitong.pth",
+		"/D/Program Files/Anaconda3/Lib/site-packages/pywin32.pth",
+		"/D/Program Files/Anaconda3/Lib/site-packages/test/test_evaluate/sample_venvs/venv27/lib/python2.7/site-packages/foo.pth",
+		"/D/Program Files/Anaconda3/Lib/site-packages/matplotlib-2.1.2-py3.6-nspkg.pth",
+		"/E/github/gongyixitong/gongyixitong/init/新建文本文档.txt",
+		"/D/Program Files/Anaconda3/Lib/site-packages/sqlalchemy/sql/base.py",
+		"/E/github/gongyixitong/gongyixitong/test/dbDingyi.py",
+		"/E/github/gongyixitong/gongyixitong/main.py",
+		"/D/Program Files/Anaconda3/Lib/site-packages/django/db/migrations/operations/base.py",
+		"/D/Program Files/Anaconda3/Lib/site-packages/django/db/__init__.py",
+		"/D/Program Files/Anaconda3/Lib/site-packages/django/db/transaction.py",
+		"/D/Program Files/Anaconda3/Lib/site-packages/django/db/utils.py",
+		"/E/github/gongyixitong/gongyixitong/__init__.py",
+		"/E/github/gongyixitong/gongyixitong/test/test.py",
+		"/E/github/gongyixitong/gongyixitong/test/ji.py",
+		"/E/github/gongyixitong/gongyixitong/widgets/login.py",
+		"/E/github/gongyixitong/gongyixitong/widgets/usermanageUI.py",
+		"/E/github/gongyixitong/gongyixitong/widgets/mainUI.py",
+		"/E/github/gongyixitong/sublime.sublime-project",
+		"/D/Program Files/Anaconda3/Lib/site-packages/mypkpath.pth",
+		"/E/github/gongyixitong/README.md",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/E/github/gongyixitong/src/testoo/examples/desktop/screenshot.py",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/User/SublimeREPL.sublime-settings",
+		"/E/github/gongyixitong/src/testoo/er.py",
+		"/E/github/gongyixitong/src/modle/encrypt.py",
+		"/E/github/gongyixitong/src/testoo/df.py",
+		"/E/github/gongyixitong/src/testoo/css.qss",
+		"/E/github/gongyixitong/src/testoo/chengfa.py",
+		"/E/github/gongyixitong/src/testoo/mainUI.py",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/LaTeXTools/LaTeXTools (Advanced).sublime-settings",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/User/LaTeXTools.sublime-settings",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/LaTeXTools/LaTeXTools.sublime-settings",
+		"/E/github/myworks2017/16jidazhuan/jiaoan/shijuan.pdf",
+		"/C/Users/gaoxing/Desktop/ee.py",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/SublimeTmpl/Main.sublime-menu",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/SublimeTmpl/templates/python.tmpl",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/User/SublimeTmpl.sublime-settings",
+		"/E/github/gongyixitong/src/widgets/login.py",
+		"/E/github/gongyixitong/src/testoo/dbDingyi.py",
+		"/E/github/gongyixitong/src/testoo/login.py",
+		"/E/github/gongyixitong/src/main.py",
+		"/C/Users/gaoxing/Desktop/a.py",
+		"/E/github/gongyixitong/src/widgets/usermanageUI.py",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/SublimeREPL/config/Python/Default.sublime-commands",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/User/Preferences.sublime-settings",
+		"/E/github/gongyixitong/src/test/ji.py",
+		"/E/github/gongyixitong/src/test/test.py",
+		"/D/Program Files/Sublime Text Build 3143 x64/Data/Packages/User/Anaconda.sublime-settings",
+		"/D/Program Files/Sublime Text Build 3143 x64/sublime.py"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 134.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gongyixitong/main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								362,
+								362
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.autopep8":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 368.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 148.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sublime.sublime-project",
+	"replace":
+	{
+		"height": 75.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 265.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
