@@ -1,0 +1,15 @@
+
+#dkfjla
+[user_db]
+dbserver=sqlite:///
+db_base=user.db
+user=
+password=
+
+[t_user]
+u_id=Integer,Sequence('user_id_seq'),primary_key=True,dfdf
+username=String(20),df
+password=String,df
+email=String,dfsdf
+
+

@@ -1,0 +1,20 @@
+[user_db]
+dbserver = sqlite:///
+db_base = user.db
+user = 
+password = 
+
+[t_user]
+u_id = Integer,Sequence('user_id_seq'),primary_key=True,dfdf
+username = String(20),df
+password = String,df
+email = String,dfsdf
+
+[Section1]
+an_int = 15
+a_bool = true
+a_float = 3.1415
+baz = fun
+bar = Python
+foo = %(bar)s is %(baz)s!
+
