@@ -4,6 +4,7 @@ Created on Wed Jan 31 20:56:56 2018
 
 @author: gaoxing
 """
+import os
 from numpy import integer
 from sqlalchemy import (DDL, Column, ForeignKey, Integer, Sequence, String,
                         create_engine, event)
@@ -14,13 +15,10 @@ from sqlalchemy.orm import relationship, scoped_session, sessionmaker
 import gongyixitong as gyxt
 
 base = str(gyxt.BASE_DIR)
-db_dir = '{}{}'.format(base, '\\gongyixitong\\temp_db\\')
 file = "users.db"
+db_file = os.path.join(base, 'gongyixitong','temp_db',file)
 
-
-print("sqlite:///{}{}".format(db_dir, file))
-
-engine = create_engine("sqlite:///{}{}".format(db_dir, file))
+engine = create_engine("sqlite:///{}".format(db_file))
 
 Base = declarative_base()
 session = scoped_session(sessionmaker(
